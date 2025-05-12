@@ -3,8 +3,6 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 dotenv.config();
 
-//MONGODB_URI=mongodb+srv://dbAdmin:dbAdminPassword@contacts.42fklwl.mongodb.net/university?retryWrites=true&w=majority&appName=Contacts
-
 export async function initMongoConnection() {
   const user = getEnvVar('MONGODB_USER');
   const pwd = getEnvVar('MONGODB_PASSWORD');
@@ -14,5 +12,5 @@ export async function initMongoConnection() {
 
   await mongoose
     .connect(dbUrl);
-  return console.log('MongoDB connected...');
+  return console.log('Mongo connection successfully established!');
 }
