@@ -55,7 +55,7 @@ function startServer() {
     res.json({
       status: 200,
 	    message: `Successfully found contact with id ${id}!`,
-      data: { contact },
+      data:  contact ,
     });
 });
   
